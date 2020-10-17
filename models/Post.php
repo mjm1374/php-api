@@ -26,12 +26,13 @@ class Post
             p.id,
             p.category_id,
             p.title,
+            p.body,
             p.author,
             p.created_at
         FROM
             ' . $this->table . ' p
         LEFT JOIN
-            category c on p.catergory_id = c.id
+            categories c on p.category_id = c.id
         ORDER BY
             p.created_at DESC';
 
